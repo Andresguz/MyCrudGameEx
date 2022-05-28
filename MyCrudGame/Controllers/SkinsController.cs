@@ -54,7 +54,7 @@ namespace MyCrudGame.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Code")] Skin skin)
+        public async Task<IActionResult> Create([Bind("Id,Name,Code,IsActive")] Skin skin)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace MyCrudGame.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Code")] Skin skin)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Code,IsActive")] Skin skin)
         {
             if (id != skin.Id)
             {

@@ -78,13 +78,13 @@ namespace MyCrudGame.Controllers
         [HttpPost]
         public async Task<ActionResult<PlayerSkin>> PostPlayerSkin([FromForm] PlayerSkin playerSkin)
         {
-            var userResp = await Task.Run(() => _context.PlayerSkins.SingleOrDefault(x => x.SkinId == playerSkin.SkinId));
-            //var userResp = await Task.Run(() => _context.Users.SingleOrDefault(x => x.Email == user.Email));
-            if (userResp == null)
-            {
-                return null;
-            }
-            else
+            //var userResp = await Task.Run(() => _context.PlayerSkins.SingleOrDefault(x => x.SkinId == playerSkin.SkinId));
+            ////var userResp = await Task.Run(() => _context.Users.SingleOrDefault(x => x.Email == user.Email));
+            //if (userResp == null)
+            //{
+            //    return null;
+            //}
+            //else
             {
                 _context.PlayerSkins.Add(playerSkin);
             }

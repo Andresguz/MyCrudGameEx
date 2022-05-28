@@ -90,6 +90,7 @@ namespace MyCrudGame.Data
                 entity.Property(e => e.Code).IsFixedLength(true);
 
                 entity.Property(e => e.Name).IsFixedLength(true);
+                entity.Property(e => e.IsActive).IsFixedLength(true);
             });
 
             //modelBuilder.Entity<User>(entity =>

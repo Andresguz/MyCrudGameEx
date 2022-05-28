@@ -23,6 +23,7 @@ namespace MyCrudGame.Models
         public string Name { get; set; }
         [StringLength(10)]
         public string Code { get; set; }
+        public bool IsActive { get; set; }
 
         [InverseProperty(nameof(PlayerSkin.Skin))]
         public virtual ICollection<PlayerSkin> PlayerSkins { get; set; }
